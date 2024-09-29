@@ -7,12 +7,35 @@
 </head>
 <body>
     <h1>To-Do-List</h1>
-    <input type="text" id="task" placeholder="Web Development">
+    <input type="text" id="task" placeholder="Enter Task">
     <h3>Start Time</h3>
-    <input type="time" id="startTime" placeholder="ex : 9:00">
+    <input type="time" id="startTime" required>
     <h3>End Time</h3>
-    <input type="time" id="endTime">
+    <input type="time" id="endTime" required>
 
-    <button>Add Task</button>
+    <button id="addTask">Add Task</button>
 </body>
+    <script>
+
+        const button = document.getElementById("addTask")
+
+        button.addEventListener('click',function(event){
+            let task = document.getElementById("task").value.trim()
+            let startTime = document.getElementById("startTime").value
+            let endTime = document.getElementById("endTime").value
+            
+            if(!task){
+                alert("Enter a task to add")
+            }
+
+            const li = document.createElement("li")
+            li.textContent = `${task} From: ${startTime} - To: ${endTime}`
+            document.body.appendChild(li)
+
+            document.getElementById("task").value = " "
+            document.getElementById("startTime").value = " "
+            document.getElementById("endTime").value = " "
+        })
+        
+    </script>
 </html>
