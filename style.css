@@ -1,0 +1,85 @@
+/* Make sure the whole page is centered */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Center the container */
+.container {
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 80%;
+    max-width: 400px;
+    box-sizing: border-box;
+}
+
+/* Styling for input fields and button */
+input[type="text"], input[type="time"] {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+/* Flexbox for aligning start and end time fields side by side */
+/* Container to hold both Start Time and End Time columns */
+.time-container {
+    display: flex;
+    justify-content: space-between; /* Space between the two columns */
+    gap: 20px; /* Space between columns */
+}
+
+/* Each column for a heading and its input */
+.time-column {
+    display: flex;
+    flex-direction: column; /* Stack heading and input vertically */
+    align-items: flex-start; /* Align heading and input to the left */
+    width: 48%; /* Ensure both columns fit side by side */
+}
+
+/* Styling for heading margins and padding */
+#startTimeLabel, #endTimeLabel {
+    margin: 0 0 5px 40px; /* Remove default margin and add space below heading */
+}
+
+/* Make input fields full width within their column */
+.time-column input {
+    width: 90%; /* Make the input take the full width of its column */
+}
+
+
+/* Button styling */
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Make it responsive on smaller devices */
+@media (max-width: 600px) {
+    .time-container {
+        flex-direction: column;
+    }
+
+    .time-container input {
+        width: 100%;
+    }
+}

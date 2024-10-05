@@ -4,38 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-Do-Application</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1 style="text-align: center;">To-Do-List</h1>
-    <input type="text" id="task" placeholder="Enter Task">
-    <h3 style="text-align: center;">Start Time</h3>
-    <input type="time" id="startTime" required>
-    <h3 style="text-align: center;">End Time</h3>
-    <input type="time" id="endTime" required>
+    <div class="container">
+        <h1>To-Do-List</h1>
+        <input type="text" id="task" placeholder="Enter Task">
+        
+        <!-- Flexbox container for the time inputs -->
+        <div class="time-container">
+            <div class="time-column">
+                <h3 id="startTimeLabel">Start Time</h3>
+                <input type="time" id="startTimeInput" required>
+            </div>
+            <div class="time-column">
+                <h3 id="endTimeLabel">End Time</h3>
+                <input type="time" id="endTimeInput" required>
+            </div>
+        </div>
+        
 
-    <button id="addTask">Add Task</button>
-</body>
+        <button id="addTask">Add Task</button>
+    </div>
+
     <script>
-
         const button = document.getElementById("addTask")
 
-        button.addEventListener('click',function(event){
+        button.addEventListener('click', function (event) {
             let task = document.getElementById("task").value.trim()
             let startTime = document.getElementById("startTime").value
             let endTime = document.getElementById("endTime").value
             
-            if(!task){
+            if (!task) {
                 alert("Enter a task to add")
+                return
             }
 
             const li = document.createElement("li")
             li.textContent = `${task} From: ${startTime} - To: ${endTime}`
             document.body.appendChild(li)
 
-            document.getElementById("task").value = " "
-            document.getElementById("startTime").value = " "
-            document.getElementById("endTime").value = " "
+            document.getElementById("task").value = ""
+            document.getElementById("startTime").value = ""
+            document.getElementById("endTime").value = ""
         })
-        
     </script>
+</body>
 </html>
