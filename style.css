@@ -1,4 +1,3 @@
-/* Make sure the whole page is centered */
 body {
     display: flex;
     justify-content: center;
@@ -9,7 +8,6 @@ body {
     background-color: #f4f4f4;
 }
 
-/* Center the container */
 .container {
     text-align: center;
     padding: 20px;
@@ -21,7 +19,6 @@ body {
     box-sizing: border-box;
 }
 
-/* Styling for input fields and button */
 input[type="text"], input[type="time"] {
     width: 90%;
     padding: 10px;
@@ -30,34 +27,27 @@ input[type="text"], input[type="time"] {
     border: 1px solid #ccc;
 }
 
-/* Flexbox for aligning start and end time fields side by side */
-/* Container to hold both Start Time and End Time columns */
 .time-container {
     display: flex;
-    justify-content: space-between; /* Space between the two columns */
-    gap: 20px; /* Space between columns */
+    justify-content: space-between; 
+    gap: 20px; 
 }
 
-/* Each column for a heading and its input */
 .time-column {
     display: flex;
-    flex-direction: column; /* Stack heading and input vertically */
-    align-items: flex-start; /* Align heading and input to the left */
-    width: 48%; /* Ensure both columns fit side by side */
+    flex-direction: column; 
+    align-items: flex-start; 
+    width: 48%;
 }
 
-/* Styling for heading margins and padding */
 #startTimeLabel, #endTimeLabel {
-    margin: 0 0 5px 40px; /* Remove default margin and add space below heading */
+    margin: 0 0 5px 40px;
 }
 
-/* Make input fields full width within their column */
 .time-column input {
-    width: 90%; /* Make the input take the full width of its column */
+    width: 90%; 
 }
 
-
-/* Button styling */
 button {
     width: 100%;
     padding: 10px;
@@ -73,7 +63,6 @@ button:hover {
     background-color: #45a049;
 }
 
-/* Make it responsive on smaller devices */
 @media (max-width: 600px) {
     .time-container {
         flex-direction: column;
