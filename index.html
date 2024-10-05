@@ -26,28 +26,6 @@
 
         <button id="addTask">Add Task</button>
     </div>
-
-    <script>
-        const button = document.getElementById("addTask")
-
-        button.addEventListener('click', function (event) {
-            let task = document.getElementById("task").value.trim()
-            let startTime = document.getElementById("startTime").value
-            let endTime = document.getElementById("endTime").value
-            
-            if (!task) {
-                alert("Enter a task to add")
-                return
-            }
-
-            const li = document.createElement("li")
-            li.textContent = `${task} From: ${startTime} - To: ${endTime}`
-            document.body.appendChild(li)
-
-            document.getElementById("task").value = ""
-            document.getElementById("startTime").value = ""
-            document.getElementById("endTime").value = ""
-        })
-    </script>
 </body>
+<script src="script.js"></script>
 </html>
