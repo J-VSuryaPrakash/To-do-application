@@ -12,8 +12,13 @@ const button = document.getElementById("addTask")
 
             const li = document.createElement("li")
             li.textContent = `${task} From: ${startTime} - To: ${endTime}`
-            document.body.appendChild(li)
-
+            
+            let div = document.createElement("div");
+            div.className = "taskname"
+                
+            let task_container = document.querySelector(".tasks-container")
+            div.appendChild(li)
+            task_container.appendChild(div)
             document.getElementById("task").value = ""
             document.getElementById("startTimeInput").value = ""
             document.getElementById("endTimeInput").value = ""

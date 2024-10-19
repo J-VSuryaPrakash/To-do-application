@@ -63,6 +63,18 @@ button:hover {
     background-color: #45a049;
 }
 
+.taskname {
+    display: flex;               /* Use flexbox */
+    justify-content: center;     /* Center horizontally */
+    align-items: center;         /* Center vertically */
+    height: 30px;               /* Set a height for the div */
+    text-align: center;          /* Center text if it wraps */
+    border: 1px solid;
+    border-radius: 0.5rem;
+    margin: 0.5rem;
+    padding: 0.5rem;
+}
+
 @media (max-width: 600px) {
     .time-container {
         flex-direction: column;
